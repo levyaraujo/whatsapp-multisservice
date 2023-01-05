@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "multiservice"
+version = "0.1.0"
+description = ""
+authors = ["Levy Araujo <lev0x79@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+flask = "^2.2.2"
+dynaconf = "^3.1.11"
+sqlalchemy = "^1.4.46"
+twilio = "^7.16.0"
+flask-restful = "^0.3.9"
+flask-cors = "^3.0.10"
+pg8000 = "^1.29.4"
+
+
+[tool.poetry.group.testing.dependencies]
+pytest = "^7.2.0"
+pytest-watch = "^4.2.0"
+
+
+[tool.poetry.group.dev.dependencies]
+black = { version = "^23.1a1", allow-prereleases = true }
+mypy = "^0.991"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

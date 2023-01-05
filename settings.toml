@@ -1,0 +1,5 @@
+[default]
+MESSAGE = 'default environment'
+
+[development]
+MESSAGE = 'development environment'

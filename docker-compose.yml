@@ -1,0 +1,22 @@
+version: '3'
+services:
+  web:
+    depends_on:
+      - db
+    container_name: app
+    build: .
+    ports:
+      - 5000:5000
+    environment:
+      - CHATENV=docker
+
+  db:
+    image: postgres:15.1
+    container_name: appdb
+    environment:
+      - POSTGRES_USER=lev0x
+      - POSTGRES_PASSWORD=levy
+    ports:
+      - 5432:5432
+    volumes:
+      - ./data:/data
