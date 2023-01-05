@@ -16,3 +16,6 @@ def create_app():
         return {"Hello": settings.MESSAGE}
 
     return app
+
+
+wsgi = create_app()
