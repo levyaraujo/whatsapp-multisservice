@@ -10,7 +10,7 @@ class Bot:
         self.username = username
         self.botnumber = settings.BOT_NUMBER
 
-    def send_message(self, message: str = None, media_url: str = None) -> str:
+    def send_message(self, message=None, media_url=None) -> str:
         try:
             __message = client.messages.create(
                 body=str(message),

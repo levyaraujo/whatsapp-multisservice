@@ -1,7 +1,5 @@
 from flask_restful import Resource, Api, request
 from flask import Blueprint
-import json
-import requests
 from src.api.bot import Bot
 
 bp = Blueprint("routes", __name__)
@@ -12,9 +10,11 @@ class MessageReceiver(Resource):
     def post(self):
         username = request.form.get("From").replace("whatsapp:+", "")
         bot = Bot(username=username)
-        bot.send_message(message=f"Olá, {username}!")
+        bot.send_message(
+            message=f"Olá! Me diga o que deseja ou digite 'atendente' que uma pessoa do nosso time irá lhe ajudar!"
+        )
 
-        return {"success": "message received"}, 200
+        return {"username": f"{username}"}, 200
 
 
 def init_app(app):
