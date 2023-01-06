@@ -9,7 +9,7 @@ def create_app():
     app = Flask(__name__)
     config.init(app)
     database.init()
-    routes.init_app(app)
+    routes.init_router(app)
 
     @app.route("/")
     def home():

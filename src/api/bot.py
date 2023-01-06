@@ -23,4 +23,4 @@ class Bot:
 
         except TwilioRestException as e:
             print(f"Oh no: {e}")
-            return "an error occurred trying to send message"
+        return "an error occurred trying to send message"
